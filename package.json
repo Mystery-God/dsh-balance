@@ -1,57 +1,57 @@
-{
-  "name": "@linxin666/dsh-balance",
-  "version": "0.1.0",
-  "description": "模型账户余额悬浮窗 for the dsh web GUI: floating model-account balance monitor with a Plugins-settings master switch. Supports DeepSeek / SiliconFlow / Moonshot / OpenRouter balance endpoints. Zero runtime dependencies.",
-  "type": "module",
-  "engines": {
-    "node": "^22.19.0 || >=24.0.0"
-  },
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./lib/index.d.ts",
-      "default": "./lib/index.js"
-    },
-    "./client": {
-      "default": "./lib/client.js"
-    },
-    "./package.json": "./package.json"
-  },
-  "files": [
-    "lib",
-    "cordis.patch.yml",
-    "README.md",
-    "README.zh.md",
-    "LICENSE"
-  ],
-  "scripts": {
-    "build": "node scripts/build.mjs",
-    "test": "node scripts/test.mjs"
-  },
-  "dsh": {
-    "bundle": {
-      "patch": "./cordis.patch.yml"
-    },
-    "client": {
-      "inject": [
-        "@deepseek-ai/dsh-client-runtime",
-        "@deepseek-ai/dsh-client-connection",
-        "@deepseek-ai/dsh-client-ui-settings"
-      ],
-      "platform": "web"
-    }
-  },
-  "peerDependencies": {
-    "react": "^18.2.0"
-  },
-  "keywords": [
-    "dsh",
-    "deepseek-harness",
-    "plugin",
-    "balance",
-    "monitor",
-    "billing"
-  ],
-  "license": "MIT"
+﻿{
+    "name":  "@linxin666/dsh-balance",
+    "version":  "0.1.1",
+    "description":  "妯″瀷璐︽埛浣欓鎮诞绐?for the dsh web GUI: floating model-account balance monitor with a Plugins-settings master switch. Supports DeepSeek / SiliconFlow / Moonshot / OpenRouter balance endpoints. Zero runtime dependencies.",
+    "type":  "module",
+    "engines":  {
+                    "node":  "^22.19.0 || \u003e=24.0.0"
+                },
+    "main":  "lib/index.js",
+    "types":  "lib/index.d.ts",
+    "exports":  {
+                    ".":  {
+                              "types":  "./lib/index.d.ts",
+                              "default":  "./lib/index.js"
+                          },
+                    "./client":  {
+                                     "default":  "./lib/client.js"
+                                 },
+                    "./package.json":  "./package.json"
+                },
+    "files":  [
+                  "lib",
+                  "cordis.patch.yml",
+                  "README.md",
+                  "README.zh.md",
+                  "LICENSE"
+              ],
+    "scripts":  {
+                    "build":  "node scripts/build.mjs",
+                    "test":  "node scripts/test.mjs"
+                },
+    "dsh":  {
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           },
+                "client":  {
+                               "inject":  [
+                                              "@deepseek-ai/dsh-client-runtime",
+                                              "@deepseek-ai/dsh-client-connection",
+                                              "@deepseek-ai/dsh-client-ui-settings"
+                                          ],
+                               "platform":  "web"
+                           }
+            },
+    "peerDependencies":  {
+                             "react":  "^18.2.0"
+                         },
+    "keywords":  [
+                     "dsh",
+                     "deepseek-harness",
+                     "plugin",
+                     "balance",
+                     "monitor",
+                     "billing"
+                 ],
+    "license":  "MIT"
 }
