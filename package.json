@@ -1,7 +1,7 @@
 ﻿{
     "name":  "@linxin666/dsh-balance",
-    "version":  "0.1.1",
-    "description":  "妯″瀷璐︽埛浣欓鎮诞绐?for the dsh web GUI: floating model-account balance monitor with a Plugins-settings master switch. Supports DeepSeek / SiliconFlow / Moonshot / OpenRouter balance endpoints. Zero runtime dependencies.",
+    "version":  "0.1.2",
+    "description":  "濡€崇€风拹锔藉煕娴ｆ瑩顤傞幃顒佽癁缁?for the dsh web GUI: floating model-account balance monitor with a Plugins-settings master switch. Supports DeepSeek / SiliconFlow / Moonshot / OpenRouter balance endpoints. Zero runtime dependencies.",
     "type":  "module",
     "engines":  {
                     "node":  "^22.19.0 || \u003e=24.0.0"

@@ -11,7 +11,7 @@ A floating model-account balance monitor for the DeepSeek Harness Web GUI: a dra
 - 💰 **余额悬浮窗 · Floating balance card**（右下角，可拖动）：总余额大字 + 充值/赠送明细 + 更新时间；⟳ 手动刷新、– 收起成小胶囊、× 关闭（留一枚 ¥ 胶囊随时唤回）。Draggable card with total balance, breakdown lines, refresh / collapse / close buttons.
 - 🔄 **实时刷新 · Auto refresh**：每 60 秒自动查询，结果 host 侧缓存 30 秒，不频繁打接口。Polls every 60s; results cached 30s host-side.
 - 🔌 **总开关 · Master switch**：「设置 → 插件 → 模型余额悬浮窗」里可一键关闭/开启悬浮窗，设置持久化到 `~/.dsh/balance/settings.json`。One-click show/hide on the Plugins-settings page, persisted locally.
-- 🔐 **密钥安全 · Credential safety**：余额查询全部走 host 端 fetch，API key 经 credentials 服务解析（环境变量 → `~/.dsh/.credentials.yaml` → `.env`），只把余额数字和错误信息下发到浏览器。Balance fetch runs on the host; the API key resolves through the credentials seam and never reaches the browser.
+- 🔐 **密钥安全 · Credential safety**：余额查询全部走 host 端 fetch；API key 可在设置页直接填写（存于 `~/.dsh/balance/settings.json`，接口只回传脱敏预览），或经 credentials 服务解析（环境变量 → `~/.dsh/.credentials.yaml` → `.env`），永不下发到浏览器。Balance fetch runs on the host; the key can be entered in the settings page (stored locally, masked in responses) or resolved through the credentials seam — it never reaches the browser.
 - 🌐 **多服务商 · Multi-provider**：DeepSeek `/user/balance`、硅基流动 `/v1/user/info`、Moonshot `/v1/users/me/balance`、OpenRouter `/api/v1/credits`；其他域名明确提示不支持。Unsupported hosts fail with a clear message.
 - 💾 **零运行时依赖 · Zero runtime dependencies**：host 半体纯 Node，浏览器半体纯 React，无需构建（`lib/` 即发布产物）。No build toolchain.
 

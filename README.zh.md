@@ -9,7 +9,7 @@
 - 💰 **余额悬浮窗**（右下角，可拖动）：总余额大字 + 充值/赠送明细 + 更新时间；⟳ 手动刷新、– 收起成小胶囊、× 关闭（留一枚 ¥ 胶囊随时唤回）
 - 🔄 **实时刷新**：每 60 秒自动查询，结果 host 侧缓存 30 秒，不频繁打接口
 - 🔌 **总开关**：「设置 → 插件 → 模型余额悬浮窗」里可一键关闭/开启悬浮窗，设置持久化到 `~/.dsh/balance/settings.json`
-- 🔐 **密钥安全**：余额查询全部走 host 端 fetch，API key 经 credentials 服务解析（环境变量 → `~/.dsh/.credentials.yaml` → `.env`），只把余额数字和错误信息下发到浏览器
+- 🔐 **密钥安全**：余额查询全部走 host 端 fetch；API key 可在设置页直接填写（存于 `~/.dsh/balance/settings.json`，接口只回传脱敏预览），或经 credentials 服务解析（环境变量 → `~/.dsh/.credentials.yaml` → `.env`），永不下发到浏览器
 - 🌐 **多服务商**：DeepSeek `/user/balance`、硅基流动 `/v1/user/info`、Moonshot `/v1/users/me/balance`、OpenRouter `/api/v1/credits`；其他域名明确提示不支持
 - 💾 **零运行时依赖**：host 半体纯 Node，浏览器半体纯 React，无需构建（`lib/` 即发布产物）
 
